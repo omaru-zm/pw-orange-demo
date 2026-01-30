@@ -33,12 +33,12 @@ npx playwright test
 ```
 Run specific test:
 ```bash
-npx playwright test `path_to_test_file`
+npx playwright test path/to/test_file
 ```
 
 Run specific test in headed mode (visible browser):
 ```bash
-npx playwright test `path_to_test_file` --headed
+npx playwright test path/to/test_file --headed
 ```
 
 ## 6. Environment variables
