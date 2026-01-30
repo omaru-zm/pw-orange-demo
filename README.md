@@ -17,7 +17,7 @@ Practice project: End-to-end test automation using Playwright. Target app: Admin
 
 Commands to run in CLI:
 ```bash
-git clone <repo URL>
+git clone https://github.com/omaru-zm/pw-orange-demo.git
 cd pw-orange-demo
 npm install
 npx playwright install
@@ -36,7 +36,7 @@ Run specific test:
 npx playwright test --<path_to_test_file>
 ```
 
-Run specific tests in headed mode (visible browser):
+Run specific test in headed mode (visible browser):
 ```bash
 npx playwright test --<path_to_test_file> --headed
 ```
