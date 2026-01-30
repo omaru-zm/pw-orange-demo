@@ -1,19 +1,19 @@
-# Playwright E2E tests demo
+# 1. Playwright E2E tests demo
 
 Practice project: End-to-end test automation using Playwright. Target app: Admin dashboard app (OrangeHRM demo website).
 
-## Tech Stack
+## 2. Tech Stack
 
 - Playwright/test
 - Typescript
 - dotenv
 
-## Prerequisites
+## 3. Prerequisites
 
 - NodeJS
 - npm
 
-# Installation
+# 4. Installation
 
 Commands to run in CLI:
 ```bash
@@ -44,6 +44,9 @@ npx playwright test --<path_to_test_file> --headed
 ## 6. Environment variables
 
 Environment variables to be set in .env file.
+
+Currently, it describes values to be used for user authentication within the tests (user/passwords).
+
 See .env.example file.
 
 
