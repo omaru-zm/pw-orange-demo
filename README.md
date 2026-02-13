@@ -32,12 +32,17 @@ Currently, it describes:
 - Values to be used for user authentication within the tests (user/passwords).
 - URLs for different environments (prod, dev)
 
-See .env.example file.
+Use .env.example file as a base to create your own local .env file:
+```bash
+cp .env.example .env
+```
+
+Then open in text editor and adjust proper values as required.
 
 
 ## 6. Running tests
 
-Before running the Login tests, make sure to setup the environment variables (see section 6 below).
+Before running the Login tests, make sure to setup the environment variables (see section 5 above).
 
 Run all tests in prod URL:
 ```bash
