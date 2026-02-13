@@ -18,6 +18,14 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
+const ENV_URLS = {
+  prod: process.env.PROD_URL,
+  dev: process.env.DEV_URL
+}
+
+const envFromCLI = process.env.TARGET_ENV;
+
 export default defineConfig<UserOptions>({
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -33,7 +41,7 @@ export default defineConfig<UserOptions>({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: ENV_URLS[envFromCLI],
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

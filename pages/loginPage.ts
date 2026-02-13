@@ -1,5 +1,6 @@
 import {expect, type Locator, type Page} from "@playwright/test"; 
 
+
 export class loginPageClass {
     readonly page: Page;
     readonly inputUsername: Locator;
@@ -22,7 +23,7 @@ export class loginPageClass {
     }
 
     async goto() {
-        await this.page.goto(this.urlDemo);
+        await this.page.goto("/");
     }
 
     async enterCredentials(username: string, password: string) {

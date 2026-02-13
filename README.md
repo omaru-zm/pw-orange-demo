@@ -23,31 +23,39 @@ npm install
 npx playwright install
 ```
 
-## 5. Running tests
-
-Before running the Login tests, make sure to setup the environment variables (see section 6 below).
-
-Run all tests:
-```bash
-npx playwright test
-```
-Run specific test:
-```bash
-npx playwright test `path_to_test_file`
-```
-
-Run specific test in headed mode (visible browser):
-```bash
-npx playwright test `path_to_test_file` --headed
-```
-
-## 6. Environment variables
+## 5. Environment variables
 
 Environment variables to be set in .env file.
 
-Currently, it describes values to be used for user authentication within the tests (user/passwords).
+Currently, it describes:
+
+- Values to be used for user authentication within the tests (user/passwords).
+- URLs for different environments (prod, dev)
 
 See .env.example file.
+
+
+## 6. Running tests
+
+Before running the Login tests, make sure to setup the environment variables (see section 6 below).
+
+Run all tests in prod URL:
+```bash
+TARGET_ENV='prod' npx playwright test
+```
+Run specific test (prod):
+```bash
+TARGET_ENV='prod' npx playwright test path/to/test_file
+```
+Run specific test (prod) on specific browser:
+```bash
+TARGET_ENV='prod' npx playwright test path/to/test_file --project=chromium
+```
+Run specific test in headed mode (visible browser) (dev):
+```bash
+TARGET_ENV='dev' npx playwright test path/to/test_file --headed
+```
+
 
 
 
