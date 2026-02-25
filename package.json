@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:prod:chromium": "TARGET_ENV='prod' npx playwright test --project=chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

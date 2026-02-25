@@ -37,7 +37,7 @@ Use .env.example file as a base to create your own local .env file:
 cp .env.example .env
 ```
 
-Then open in text editor and adjust proper values as required.
+Then open in text editor and adjust proper values as required (since this is a demo project, you can use the same values from the example file - no need to modify).
 
 
 ## 6. Running tests
@@ -60,7 +60,9 @@ Run specific test in headed mode (visible browser) (dev):
 ```bash
 TARGET_ENV='dev' npx playwright test path/to/test_file --headed
 ```
-
-
+Run all tests in prod URL + Chromium browser (using alias from scripts):
+```bash
+npm run test:prod:chromium
+```
 
 
